@@ -20,20 +20,38 @@ EncapsulatingTypes: ./EncapsulatingTypes.cpp
 StringStack: ./StringStack.cpp
 	${COMPILE_CMD} -o $@ ./StringStack.cpp
 
+ConstMember: ./ConstMember.cpp
+	${COMPILE_CMD} -o $@ ./ConstMember.cpp
+
+Castaway: ./Castaway.cpp
+		${COMPILE_CMD} -o $@ ./Castaway.cpp
+
+Mutable: ./Mutable.cpp
+		${COMPILE_CMD} -o $@ ./Mutable.cpp
+
 test: ConstInitialization \
 	  BuiltInTypeConstructors \
 	  EncapsulatingTypes \
-	  StringStack
+	  StringStack \
+	  ConstMember \
+	  Castaway \
+	  Mutable \
 	./ConstInitialization
 	./BuiltInTypeConstructors
 	./EncapsulatingTypes
 	./StringStack
+	./ConstMember
+	./Castaway
+	./Mutable
 
 clean:
 	rm ConstInitialization
 	rm BuiltInTypeConstructors
 	rm EncapsulatingTypes
 	rm StringStack
+	rm ConstMember
+	rm Castaway
+	rm Mutable
 
 .PHONY:
 	clean
