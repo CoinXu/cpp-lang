@@ -29,6 +29,7 @@ Castaway: ./Castaway.cpp
 Mutable: ./Mutable.cpp
 		${COMPILE_CMD} -o $@ ./Mutable.cpp
 
+
 test: ConstInitialization \
 	  BuiltInTypeConstructors \
 	  EncapsulatingTypes \
