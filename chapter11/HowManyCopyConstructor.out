@@ -1,0 +1,18 @@
+HowManyCopyConstructor():  h: objectCount = 1
+entering f()
+HowManyCopyConstructor(const HowManyCopyConstructor& h):  h copy: objectCount = 2
+x argument inside f():  h copy: objectCount = 2
+returning from f()
+HowManyCopyConstructor(const HowManyCopyConstructor& h):  h copy copy: objectCount = 3
+~HowManyCopyConstructor():  h copy: objectCount = 2
+h2 after call to f():  h copy copy: objectCount = 2
+call f(), no return value
+HowManyCopyConstructor(const HowManyCopyConstructor& h):  h copy: objectCount = 3
+x argument inside f():  h copy: objectCount = 3
+returning from f()
+HowManyCopyConstructor(const HowManyCopyConstructor& h):  h copy copy: objectCount = 4
+~HowManyCopyConstructor():  h copy copy: objectCount = 3
+~HowManyCopyConstructor():  h copy: objectCount = 2
+after call to f()
+~HowManyCopyConstructor():  h copy copy: objectCount = 1
+~HowManyCopyConstructor():  h: objectCount = 0
